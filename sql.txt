@@ -1,0 +1,289 @@
+1. --Create Database:---
+  
+ CREATE DATABASE college;
+
+
+
+2. --Delete Database:
+
+ DROP DATABASE college;
+
+
+
+3. --Create student Table:
+
+ CREATE TABLE student (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    branch VARCHAR(30),
+    contact VARCHAR(15),
+    blood_group VARCHAR(5)
+);
+
+
+
+4. --Drop student Table:
+
+ DROP TABLE student;
+
+
+--------------------- ---Insert Data: -------------------------
+5. --Insert Data into student Table
+
+ INSERT INTO student (name, branch, contact, blood_group) 
+ VALUES ('Sujit', 'Sci', '3422573251', 'A-'),
+       ('Ajit', 'Sci', '3422573251', 'A'),
+       ('Raghav', 'Com', '3422573255', 'B+');
+
+6. --Insert a Single Record:
+
+
+INSERT INTO student (name, branch, contact, blood_group)
+VALUES ('Sham', 'Sci', '0000000000', 'B+');
+
+
+
+7. --Update Record:
+
+ UPDATE student
+ SET contact = '1234567890', blood_group = 'O+'
+ WHERE id = 1;
+
+
+mysql> select *from student;
++----+--------+--------+------------+-------------+
+| id | name   | branch | contact    | blood_group |
++----+--------+--------+------------+-------------+
+|  1 | sujit  | sci    | 1234567890 | O+          |
+|  2 | ajit   | sci    | 3422573251 | A           |
+|  3 | raghav | com    | 3422573255 | B+          |
+|  4 | raghav | sci    | 000000000  | B+          |
+|  5 | raghav | sci    | 000000000  | NULL        |
+|  6 | gaurav | sci    | 000000000  | NULL        |
+|  7 | ram    | sci    | NULL       | B+          |
+|  8 | sham   | sci    | 000000000  | B+          |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |
+| 10 | Ajit   | Sci    | 3422573251 | A           |
+| 11 | Raghav | Com    | 3422573255 | B+          |
+| 12 | Raghav | Sci    | 000000000  | B+          |
+| 13 | Raghav | Sci    | 000000000  | NULL        |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |
+| 15 | Ram    | Sci    | NULL       | B+          |
+| 16 | Sham   | Sci    | 000000000  | B+          |
+| 17 | Sham   | Sci    | 0000000000 | B+          |
++----+--------+--------+------------+-------------+
+17 rows in set (0.00 sec)
+
+
+
+8. --Delete Inserted Data:
+
+ DELETE FROM student WHERE id = 5;
+
++----+--------+--------+------------+-------------+
+| id | name   | branch | contact    | blood_group |
++----+--------+--------+------------+-------------+
+|  1 | sujit  | sci    | 1234567890 | O+          |
+|  2 | ajit   | sci    | 3422573251 | A           |
+|  3 | raghav | com    | 3422573255 | B+          |
+|  4 | raghav | sci    | 000000000  | B+          |
+|  6 | gaurav | sci    | 000000000  | NULL        |
+|  7 | ram    | sci    | NULL       | B+          |
+|  8 | sham   | sci    | 000000000  | B+          |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |
+| 10 | Ajit   | Sci    | 3422573251 | A           |
+| 11 | Raghav | Com    | 3422573255 | B+          |
+| 12 | Raghav | Sci    | 000000000  | B+          |
+| 13 | Raghav | Sci    | 000000000  | NULL        |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |
+| 15 | Ram    | Sci    | NULL       | B+          |
+| 16 | Sham   | Sci    | 000000000  | B+          |
+| 17 | Sham   | Sci    | 0000000000 | B+          |
++----+--------+--------+------------+-------------+
+
+9. --Rename Table:
+
+ ALTER TABLE student RENAME TO student1;
+
+
+--------------------Alter Table Operations-------------------
+10. --Add Column:
+
+ ALTER TABLE student ADD email VARCHAR(50);
+
+
+
+11. --Modify Column Data Type:
+
+ ALTER TABLE student MODIFY contact VARCHAR(20);
+
+
+12. --Drop Column:
+
+ ALTER TABLE student DROP COLUMN email;
+
+
+13. --Change Column Name:
+
+ ALTER TABLE student CHANGE branch major VARCHAR(50);
+
+
+
+---------------------------Select Operations---------------------------------------
+14. --Select All Records:
+ 
+ SELECT * FROM student;
+
+
+15. --Select Specific Column (name):
+
+ SELECT name FROM student;
+
+
+16. --Select Distinct Data (contacts):
+
+ SELECT DISTINCT contact FROM student;
+
+
+--------------------------------------Count Operations-------------------------------
+17. --Get Count of Records by Column:
+
+SELECT COUNT(name) FROM student;
+
++-------------+
+| COUNT(name) |
++-------------+
+|          16 |
++-------------+
+
+
+18. --Get Total Record Count in Table:
+
+ SELECT COUNT(*) FROM student;
+ 
++----------+
+| COUNT(*) |
++----------+
+|       16 |
++----------+
+
+19. --Get Count of Distinct Contacts:
+
+
+SELECT COUNT(DISTINCT contact) FROM student;
+
++-------------------------+
+| COUNT(DISTINCT contact) |
++-------------------------+
+|                       5 |
++-------------------------+
+
+
+
+-----------------------------------Select Top N Records -----------------------------------
+20. --Select Top 2 Records:
+
+SELECT * FROM student LIMIT 2;
+
++----+-------+--------+------------+-------------+
+| id | name  | branch | contact    | blood_group |
++----+-------+--------+------------+-------------+
+|  1 | sujit | sci    | 1234567890 | O+          |
+|  2 | ajit  | sci    | 3422573251 | A           |
++----+-------+--------+------------+-------------+
+
+21. --Select with Alias (as column name):
+
+ SELECT contact AS con FROM student;
++------------+
+| con        |
++------------+
+| 1234567890 |
+| 3422573251 |
+| 3422573255 |
+| 000000000  |
+| 000000000  |
+| NULL       |
+| 000000000  |
+| 3422573251 |
+| 3422573251 |
+| 3422573255 |
+| 000000000  |
+| 000000000  |
+| 000000000  |
+| NULL       |
+| 000000000  |
+| 0000000000 |
++------------+
+
+
+22. --Select Using IN (filter by names):
+
+
+ SELECT * FROM student WHERE name IN ('Sujit', 'Ajit');
+
++----+-------+--------+------------+-------------+
+| id | name  | branch | contact    | blood_group |
++----+-------+--------+------------+-------------+
+|  1 | sujit | sci    | 1234567890 | O+          |
+|  2 | ajit  | sci    | 3422573251 | A           |
+|  9 | Sujit | Sci    | 3422573251 | A-          |
+| 10 | Ajit  | Sci    | 3422573251 | A           |
++----+-------+--------+------------+-------------+
+
+
+23. --Select Sum of a Column (sum of contact numbers):
+
+ SELECT SUM(contact) AS total_contact FROM student;
+
++---------------+
+| total_contact |
++---------------+
+|   18347434153 |
++---------------+
+
+
+--------------------Select Null Values Operations-------------------------------
+24. --Select Rows with NULL Value in blood_group:
+
+ SELECT * FROM student WHERE blood_group IS NULL;
+
++----+--------+--------+-----------+-------------+
+| id | name   | branch | contact   | blood_group |
++----+--------+--------+-----------+-------------+
+|  6 | gaurav | sci    | 000000000 | NULL        |
+| 13 | Raghav | Sci    | 000000000 | NULL        |
+| 14 | Gaurav | Sci    | 000000000 | NULL        |
++----+--------+--------+-----------+-------------+
+
+
+
+25. --Select Rows with Non-NULL Value in contact:
+
+ SELECT * FROM student WHERE contact IS NOT NULL;
+
+
+mysql> SELECT * FROM student WHERE contact IS NOT NULL;
++----+--------+--------+------------+-------------+
+| id | name   | branch | contact    | blood_group |
++----+--------+--------+------------+-------------+
+|  1 | sujit  | sci    | 1234567890 | O+          |
+|  2 | ajit   | sci    | 3422573251 | A           |
+|  3 | raghav | com    | 3422573255 | B+          |
+|  4 | raghav | sci    | 000000000  | B+          |
+|  6 | gaurav | sci    | 000000000  | NULL        |
+|  8 | sham   | sci    | 000000000  | B+          |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |
+| 10 | Ajit   | Sci    | 3422573251 | A           |
+| 11 | Raghav | Com    | 3422573255 | B+          |
+| 12 | Raghav | Sci    | 000000000  | B+          |
+| 13 | Raghav | Sci    | 000000000  | NULL        |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |
+| 16 | Sham   | Sci    | 000000000  | B+          |
+| 17 | Sham   | Sci    | 0000000000 | B+          |
++----+--------+--------+------------+-------------+
+
+-----------------------------------------------------------------------------------------
+
+
+
