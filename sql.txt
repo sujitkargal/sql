@@ -283,7 +283,394 @@ mysql> SELECT * FROM student WHERE contact IS NOT NULL;
 | 17 | Sham   | Sci    | 0000000000 | B+          |
 +----+--------+--------+------------+-------------+
 
------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+25. select *from staff order by name asc;
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+| staff_id | name         | position            | department             | contact    | email                    |
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+|        5 | Amit Singh   | Professor           | Chemistry              | 9876543214 | amit.singh@college.com   |
+|        3 | Anil Patel   | Assistant Professor | Physics                | 9876543212 | anil.patel@college.com   |
+|       10 | Geeta Joshi  | Professor           | History                | 9876543219 | geeta.joshi@college.com  |
+|        6 | Neha Reddy   | Lecturer            | English                | 9876543215 | neha.reddy@college.com   |
+|        2 | Priya Sharma | Lecturer            | Mathematics            | 9876543211 | priya.sharma@college.com |
+|        9 | Rajesh Gupta | Lecturer            | Economics              | 9876543218 | rajesh.gupta@college.com |
+|        1 | Ravi Kumar   | Professor           | Computer Science       | 9876543210 | ravi.kumar@college.com   |
+|        4 | Sanya Verma  | Associate Professor | Biology                | 9876543213 | sanya.verma@college.com  |
+|        8 | Sunita Iyer  | Professor           | Electrical Engineering | 9876543217 | sunita.iyer@college.com  |
+|        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 9876543216 | vikram.rao@college.com   |
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+
+
+
+27. select *from staff order by name desc;
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+| staff_id | name         | position            | department             | contact    | email                    |
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+|        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 9876543216 | vikram.rao@college.com   |
+|        8 | Sunita Iyer  | Professor           | Electrical Engineering | 9876543217 | sunita.iyer@college.com  |
+|        4 | Sanya Verma  | Associate Professor | Biology                | 9876543213 | sanya.verma@college.com  |
+|        1 | Ravi Kumar   | Professor           | Computer Science       | 9876543210 | ravi.kumar@college.com   |
+|        9 | Rajesh Gupta | Lecturer            | Economics              | 9876543218 | rajesh.gupta@college.com |
+|        2 | Priya Sharma | Lecturer            | Mathematics            | 9876543211 | priya.sharma@college.com |
+|        6 | Neha Reddy   | Lecturer            | English                | 9876543215 | neha.reddy@college.com   |
+|       10 | Geeta Joshi  | Professor           | History                | 9876543219 | geeta.joshi@college.com  |
+|        3 | Anil Patel   | Assistant Professor | Physics                | 9876543212 | anil.patel@college.com   |
+|        5 | Amit Singh   | Professor           | Chemistry              | 9876543214 | amit.singh@college.com   |
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+
+
+
+28.  select *from staff order by  rand() limit 3;
++----------+--------------+---------------------+------------+------------+--------------------------+
+| staff_id | name         | position            | department | contact    | email                    |
++----------+--------------+---------------------+------------+------------+--------------------------+
+|       10 | Geeta Joshi  | Professor           | History    | 9876543219 | geeta.joshi@college.com  |
+|        4 | Sanya Verma  | Associate Professor | Biology    | 9876543213 | sanya.verma@college.com  |
+|        9 | Rajesh Gupta | Lecturer            | Economics  | 9876543218 | rajesh.gupta@college.com |
++----------+--------------+---------------------+------------+------------+--------------------------+
+
+
+
+
+29.  select *from staff order by  rand();
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+| staff_id | name         | position            | department             | contact    | email                    |
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+|        8 | Sunita Iyer  | Professor           | Electrical Engineering | 9876543217 | sunita.iyer@college.com  |
+|        9 | Rajesh Gupta | Lecturer            | Economics              | 9876543218 | rajesh.gupta@college.com |
+|       10 | Geeta Joshi  | Professor           | History                | 9876543219 | geeta.joshi@college.com  |
+|        2 | Priya Sharma | Lecturer            | Mathematics            | 9876543211 | priya.sharma@college.com |
+|        6 | Neha Reddy   | Lecturer            | English                | 9876543215 | neha.reddy@college.com   |
+|        5 | Amit Singh   | Professor           | Chemistry              | 9876543214 | amit.singh@college.com   |
+|        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 9876543216 | vikram.rao@college.com   |
+|        3 | Anil Patel   | Assistant Professor | Physics                | 9876543212 | anil.patel@college.com   |
+|        4 | Sanya Verma  | Associate Professor | Biology                | 9876543213 | sanya.verma@college.com  |
+|        1 | Ravi Kumar   | Professor           | Computer Science       | 9876543210 | ravi.kumar@college.com   |
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+
+---------------------------------------------------------------------------------update all record-----------------------------------------------------------------------------------------------------------
+
+30. update staff set contact='8888888888';
+
+Query OK, 10 rows affected (0.01 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+
+31. select *from staff;
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+| staff_id | name         | position            | department             | contact    | email                    |
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+|        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
++----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+
+
+=================================================================================================JOIN============================================================================================
+
+
+--------------------------------------------------------------------ineer join---------------------------------------------------------------------------------------------------
+
+31.     select *from student inner join staff on student.id=staff.staff_id;
+
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+| id | name   | branch | contact    | blood_group | staff_id | name         | position            | department             | contact    | email                    |
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+|  1 | sujit  | sci    | 1234567890 | O+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  2 | ajit   | sci    | 3422573251 | A           |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  3 | raghav | com    | 3422573255 | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  4 | raghav | sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  6 | gaurav | sci    | 000000000  | NULL        |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  7 | ram    | sci    | NULL       | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  8 | sham   | sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 10 | Ajit   | Sci    | 3422573251 | A           |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+------------------------------------------------------------------------left outer join------------------------------------------------------------------------------------------------------------
+
+32.  select *from student left outer join staff on student.id=staff.staff_id;
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+| id | name   | branch | contact    | blood_group | staff_id | name         | position            | department             | contact    | email                    |
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+|  1 | sujit  | sci    | 1234567890 | O+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  2 | ajit   | sci    | 3422573251 | A           |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  3 | raghav | com    | 3422573255 | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  4 | raghav | sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  6 | gaurav | sci    | 000000000  | NULL        |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  7 | ram    | sci    | NULL       | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  8 | sham   | sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 10 | Ajit   | Sci    | 3422573251 | A           |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 11 | Raghav | Com    | 3422573255 | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+| 12 | Raghav | Sci    | 000000000  | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+| 13 | Raghav | Sci    | 000000000  | NULL        |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+| 15 | Ram    | Sci    | NULL       | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+| 16 | Sham   | Sci    | 000000000  | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+| 17 | Sham   | Sci    | 0000000000 | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+
+-----------------------------------------------------------------------------right outer join--------------------------------------------------------------------------------------------------
+
+33.   select *from student right outer join staff on student.id=staff.staff_id;
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+| id   | name   | branch | contact    | blood_group | staff_id | name         | position            | department             | contact    | email                    |
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+|    1 | sujit  | sci    | 1234567890 | O+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|    2 | ajit   | sci    | 3422573251 | A           |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|    3 | raghav | com    | 3422573255 | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|    4 | raghav | sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| NULL | NULL   | NULL   | NULL       | NULL        |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|    6 | gaurav | sci    | 000000000  | NULL        |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|    7 | ram    | sci    | NULL       | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|    8 | sham   | sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|    9 | Sujit  | Sci    | 3422573251 | A-          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|   10 | Ajit   | Sci    | 3422573251 | A           |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+
+------------------------------------------------------------------full left join-------------------------------------------------------------------------------------------------
+
+ 34.    select *from student left join staff on student.id=staff.staff_id
+      -> union
+     -> select *from student right join staff on student.id=staff.staff_id
+     -> ;
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+| id   | name   | branch | contact    | blood_group | staff_id | name         | position            | department             | contact    | email                    |
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+|    1 | sujit  | sci    | 1234567890 | O+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|    2 | ajit   | sci    | 3422573251 | A           |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|    3 | raghav | com    | 3422573255 | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|    4 | raghav | sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|    6 | gaurav | sci    | 000000000  | NULL        |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|    7 | ram    | sci    | NULL       | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|    8 | sham   | sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|    9 | Sujit  | Sci    | 3422573251 | A-          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|   10 | Ajit   | Sci    | 3422573251 | A           |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|   11 | Raghav | Com    | 3422573255 | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   12 | Raghav | Sci    | 000000000  | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   13 | Raghav | Sci    | 000000000  | NULL        |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   14 | Gaurav | Sci    | 000000000  | NULL        |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   15 | Ram    | Sci    | NULL       | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   16 | Sham   | Sci    | 000000000  | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   17 | Sham   | Sci    | 0000000000 | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+| NULL | NULL   | NULL   | NULL       | NULL        |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+
+---------------------------------------------------------------------------full right join------------------------------------------------------------------------------------------------
+
+35.   select *from student right join staff on student.id=staff.staff_id
+    -> union
+    -> select *from student left join staff on student.id=staff.staff_id ;
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+| id   | name   | branch | contact    | blood_group | staff_id | name         | position            | department             | contact    | email                    |
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+|    1 | sujit  | sci    | 1234567890 | O+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|    2 | ajit   | sci    | 3422573251 | A           |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|    3 | raghav | com    | 3422573255 | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|    4 | raghav | sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| NULL | NULL   | NULL   | NULL       | NULL        |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|    6 | gaurav | sci    | 000000000  | NULL        |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|    7 | ram    | sci    | NULL       | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|    8 | sham   | sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|    9 | Sujit  | Sci    | 3422573251 | A-          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|   10 | Ajit   | Sci    | 3422573251 | A           |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|   11 | Raghav | Com    | 3422573255 | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   12 | Raghav | Sci    | 000000000  | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   13 | Raghav | Sci    | 000000000  | NULL        |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   14 | Gaurav | Sci    | 000000000  | NULL        |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   15 | Ram    | Sci    | NULL       | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   16 | Sham   | Sci    | 000000000  | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
+|   17 | Sham   | Sci    | 0000000000 | B+          |     NULL | NULL         | NULL                | NULL                   | NULL       | NULL                     |
++------+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+
+
+
+
+
+--------------------------------------------------------------------------------------CROSS JOIN------------------------------------------------------------------------------------------
+
+36.  select *from student cross join staff;
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+| id | name   | branch | contact    | blood_group | staff_id | name         | position            | department             | contact    | email                    |
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+|  1 | sujit  | sci    | 1234567890 | O+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|  1 | sujit  | sci    | 1234567890 | O+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|  1 | sujit  | sci    | 1234567890 | O+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  1 | sujit  | sci    | 1234567890 | O+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  1 | sujit  | sci    | 1234567890 | O+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  1 | sujit  | sci    | 1234567890 | O+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|  1 | sujit  | sci    | 1234567890 | O+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  1 | sujit  | sci    | 1234567890 | O+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  1 | sujit  | sci    | 1234567890 | O+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  1 | sujit  | sci    | 1234567890 | O+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  2 | ajit   | sci    | 3422573251 | A           |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|  2 | ajit   | sci    | 3422573251 | A           |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|  2 | ajit   | sci    | 3422573251 | A           |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  2 | ajit   | sci    | 3422573251 | A           |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  2 | ajit   | sci    | 3422573251 | A           |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  2 | ajit   | sci    | 3422573251 | A           |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|  2 | ajit   | sci    | 3422573251 | A           |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  2 | ajit   | sci    | 3422573251 | A           |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  2 | ajit   | sci    | 3422573251 | A           |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  2 | ajit   | sci    | 3422573251 | A           |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  3 | raghav | com    | 3422573255 | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|  3 | raghav | com    | 3422573255 | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|  3 | raghav | com    | 3422573255 | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  3 | raghav | com    | 3422573255 | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  3 | raghav | com    | 3422573255 | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  3 | raghav | com    | 3422573255 | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|  3 | raghav | com    | 3422573255 | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  3 | raghav | com    | 3422573255 | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  3 | raghav | com    | 3422573255 | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  3 | raghav | com    | 3422573255 | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  4 | raghav | sci    | 000000000  | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|  4 | raghav | sci    | 000000000  | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|  4 | raghav | sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  4 | raghav | sci    | 000000000  | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  4 | raghav | sci    | 000000000  | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  4 | raghav | sci    | 000000000  | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|  4 | raghav | sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  4 | raghav | sci    | 000000000  | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  4 | raghav | sci    | 000000000  | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  4 | raghav | sci    | 000000000  | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  6 | gaurav | sci    | 000000000  | NULL        |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|  6 | gaurav | sci    | 000000000  | NULL        |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|  6 | gaurav | sci    | 000000000  | NULL        |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  6 | gaurav | sci    | 000000000  | NULL        |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  6 | gaurav | sci    | 000000000  | NULL        |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  6 | gaurav | sci    | 000000000  | NULL        |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|  6 | gaurav | sci    | 000000000  | NULL        |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  6 | gaurav | sci    | 000000000  | NULL        |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  6 | gaurav | sci    | 000000000  | NULL        |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  6 | gaurav | sci    | 000000000  | NULL        |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  7 | ram    | sci    | NULL       | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|  7 | ram    | sci    | NULL       | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|  7 | ram    | sci    | NULL       | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  7 | ram    | sci    | NULL       | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  7 | ram    | sci    | NULL       | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  7 | ram    | sci    | NULL       | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|  7 | ram    | sci    | NULL       | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  7 | ram    | sci    | NULL       | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  7 | ram    | sci    | NULL       | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  7 | ram    | sci    | NULL       | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  8 | sham   | sci    | 000000000  | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|  8 | sham   | sci    | 000000000  | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|  8 | sham   | sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  8 | sham   | sci    | 000000000  | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  8 | sham   | sci    | 000000000  | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  8 | sham   | sci    | 000000000  | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|  8 | sham   | sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  8 | sham   | sci    | 000000000  | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  8 | sham   | sci    | 000000000  | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  8 | sham   | sci    | 000000000  | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+|  9 | Sujit  | Sci    | 3422573251 | A-          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+| 10 | Ajit   | Sci    | 3422573251 | A           |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+| 10 | Ajit   | Sci    | 3422573251 | A           |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+| 11 | Raghav | Com    | 3422573255 | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 11 | Raghav | Com    | 3422573255 | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 11 | Raghav | Com    | 3422573255 | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+| 11 | Raghav | Com    | 3422573255 | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+| 11 | Raghav | Com    | 3422573255 | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+| 11 | Raghav | Com    | 3422573255 | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+| 11 | Raghav | Com    | 3422573255 | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| 11 | Raghav | Com    | 3422573255 | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+| 11 | Raghav | Com    | 3422573255 | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+| 11 | Raghav | Com    | 3422573255 | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+| 12 | Raghav | Sci    | 000000000  | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 12 | Raghav | Sci    | 000000000  | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 12 | Raghav | Sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+| 12 | Raghav | Sci    | 000000000  | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+| 12 | Raghav | Sci    | 000000000  | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+| 12 | Raghav | Sci    | 000000000  | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+| 12 | Raghav | Sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| 12 | Raghav | Sci    | 000000000  | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+| 12 | Raghav | Sci    | 000000000  | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+| 12 | Raghav | Sci    | 000000000  | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+| 13 | Raghav | Sci    | 000000000  | NULL        |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+| 13 | Raghav | Sci    | 000000000  | NULL        |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+| 14 | Gaurav | Sci    | 000000000  | NULL        |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+| 15 | Ram    | Sci    | NULL       | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 15 | Ram    | Sci    | NULL       | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 15 | Ram    | Sci    | NULL       | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+| 15 | Ram    | Sci    | NULL       | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+| 15 | Ram    | Sci    | NULL       | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+| 15 | Ram    | Sci    | NULL       | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+| 15 | Ram    | Sci    | NULL       | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| 15 | Ram    | Sci    | NULL       | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+| 15 | Ram    | Sci    | NULL       | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+| 15 | Ram    | Sci    | NULL       | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+| 16 | Sham   | Sci    | 000000000  | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 16 | Sham   | Sci    | 000000000  | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 16 | Sham   | Sci    | 000000000  | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+| 16 | Sham   | Sci    | 000000000  | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+| 16 | Sham   | Sci    | 000000000  | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+| 16 | Sham   | Sci    | 000000000  | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+| 16 | Sham   | Sci    | 000000000  | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| 16 | Sham   | Sci    | 000000000  | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+| 16 | Sham   | Sci    | 000000000  | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+| 16 | Sham   | Sci    | 000000000  | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
+| 17 | Sham   | Sci    | 0000000000 | B+          |       10 | Geeta Joshi  | Professor           | History                | 8888888888 | geeta.joshi@college.com  |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        9 | Rajesh Gupta | Lecturer            | Economics              | 8888888888 | rajesh.gupta@college.com |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        8 | Sunita Iyer  | Professor           | Electrical Engineering | 8888888888 | sunita.iyer@college.com  |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        7 | Vikram Rao   | Assistant Professor | Mechanical Engineering | 8888888888 | vikram.rao@college.com   |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        6 | Neha Reddy   | Lecturer            | English                | 8888888888 | neha.reddy@college.com   |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        5 | Amit Singh   | Professor           | Chemistry              | 8888888888 | amit.singh@college.com   |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        4 | Sanya Verma  | Associate Professor | Biology                | 8888888888 | sanya.verma@college.com  |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        3 | Anil Patel   | Assistant Professor | Physics                | 8888888888 | anil.patel@college.com   |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        2 | Priya Sharma | Lecturer            | Mathematics            | 8888888888 | priya.sharma@college.com |
+| 17 | Sham   | Sci    | 0000000000 | B+          |        1 | Ravi Kumar   | Professor           | Computer Science       | 8888888888 | ravi.kumar@college.com   |
++----+--------+--------+------------+-------------+----------+--------------+---------------------+------------------------+------------+--------------------------+
+
 
 
 
